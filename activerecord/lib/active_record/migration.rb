@@ -626,6 +626,8 @@ module ActiveRecord
       write "#{subitem ? "   ->" : "--"} #{message}"
     end
 
+    # Prints customized +message+ to the console while running the
+    # migration code instead of default action describing the migration.
     def say_with_time(message)
       say(message)
       result = nil
