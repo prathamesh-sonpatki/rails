@@ -1611,6 +1611,8 @@ class TestRoutingMapper < ActionDispatch::IntegrationTest
 
   def test_namespaced_roots
     draw do
+      root :to => "home#index"
+
       namespace :account do
         root :to => "account#index"
       end
@@ -1774,6 +1776,8 @@ class TestRoutingMapper < ActionDispatch::IntegrationTest
 
   def test_root_works_in_the_resources_scope
     draw do
+      root :to => "home#index"
+
       resources :products do
         root :to => "products#root"
       end
