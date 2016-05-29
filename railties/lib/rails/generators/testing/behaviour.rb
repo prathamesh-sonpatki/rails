@@ -63,8 +63,11 @@ module Rails
         # You can provide a configuration hash as second argument. This method returns the output
         # printed by the generator.
         def run_generator(args=self.default_arguments, config={})
+          p self.generator_class.new(["test"]).method(:create_channel_file).source_location
+
           capture(:stdout) do
             args += ['--skip-bundle'] unless args.include? '--dev'
+
             self.generator_class.start(args, config.reverse_merge(destination_root: destination_root))
           end
         end
