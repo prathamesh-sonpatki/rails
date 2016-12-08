@@ -11,13 +11,21 @@ module ActiveRecord
         @default = default
       end
 
-      def build_from_database(values = {}, additional_types = {})
+      def build_from_database(values = {}, additional_types = {}, attribute_aliases = [])
         if always_initialized && !values.key?(always_initialized)
           values[always_initialized] = nil
         end
 
         attributes = LazyAttributeHash.new(types, values, additional_types, &default)
-        AttributeSet.new(attributes)
+        @_set = AttributeSet.new(attributes)
+
+        p attribute_aliases
+        p "======"
+        attribute_aliases.each do |new_name, old_name|
+          @_set.add_alias(new_name, old_name)
+        end
+
+        @_set
       end
     end
   end

@@ -198,6 +198,10 @@ module ActiveRecord
           ConnectionAdapters::NullColumn.new(name)
         end
       end
+
+      def alias_attribute(new_name, old_name)
+        self.attribute_aliases = attribute_aliases.merge(new_name.to_s => old_name.to_s)
+      end
     end
 
     # A Person object with a name attribute can ask <tt>person.respond_to?(:name)</tt>,

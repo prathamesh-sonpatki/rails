@@ -4,17 +4,23 @@ require "active_record/attribute_set/yaml_encoder"
 module ActiveRecord
   class AttributeSet # :nodoc:
     delegate :each_value, :fetch, to: :attributes
+    class_attribute :attribute_aliases, instance_writer: false
+    self.attribute_aliases = {}
 
     def initialize(attributes)
       @attributes = attributes
     end
 
     def [](name)
-      attributes[name] || Attribute.null(name)
+      attr_name = self.attribute_aliases[name] || name
+
+      attributes[attr_name] || Attribute.null(name)
     end
 
     def []=(name, value)
-      attributes[name] = value
+      attr_name = self.attribute_aliases[name] || name
+
+      attributes[attr_name] = value
     end
 
     def values_before_type_cast
@@ -96,6 +102,10 @@ module ActiveRecord
 
     def ==(other)
       attributes == other.attributes
+    end
+
+    def add_alias(new_name, old_name)
+      self.attribute_aliases = attribute_aliases.merge(new_name.to_s => old_name.to_s)
     end
 
     protected
