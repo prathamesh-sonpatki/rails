@@ -38,7 +38,7 @@ Major Features
 
 ### Yarn Support
 
-[Pull Request](https://github.com/rails/rails/pull/26836)
+[Pull request](https://github.com/rails/rails/pull/26836)
 
 Rails 5.1 allows managing JavaScript dependencies
 from NPM via Yarn. This will make it easy to use libraries like React, VueJS
@@ -48,7 +48,7 @@ Rails 5.1 app.
 
 ### Optional Webpack support
 
-[Pull Request](https://github.com/rails/rails/pull/27288)
+[Pull request](https://github.com/rails/rails/pull/27288)
 
 Rails apps can integrate with [Webpack](https://webpack.js.org/), a JavaScript
 asset bundler, more easily using the new [Webpacker](https://github.com/rails/webpacker)
@@ -62,7 +62,7 @@ by Yarn, which is enabled by default.
 
 ### jQuery no longer a default dependency
 
-[Pull Request](https://github.com/rails/rails/pull/27113)
+[Pull request](https://github.com/rails/rails/pull/27113)
 
 jQuery was required by default in earlier versions of Rails to provide features
 like `data-remote`, `data-confirm` and other parts of Rails' Unobtrusive JavaScript
@@ -74,7 +74,7 @@ You can still use jQuery if needed, but it is no longer required by default.
 
 ### System tests
 
-[Pull Request](https://github.com/rails/rails/pull/26703)
+[Pull request](https://github.com/rails/rails/pull/26703)
 
 Rails 5.1 has baked-in support for writing Capybara tests, in the form of
 System tests. You no longer need to worry about configuring Capybara and
@@ -84,7 +84,7 @@ screenshots.
 
 ### Encrypted secrets
 
-[Pull Request](https://github.com/rails/rails/pull/28038)
+[Pull request](https://github.com/rails/rails/pull/28038)
 
 Rails now allows management of application secrets in a secure way,
 building on top of the [sekrets](https://github.com/ahoward/sekrets) gem.
@@ -99,7 +99,7 @@ Secrets will be decrypted in production, using a key stored either in the
 
 ### Parameterized mailers
 
-[Pull Request](https://github.com/rails/rails/pull/27825)
+[Pull request](https://github.com/rails/rails/pull/27825)
 
 Allows specifying common parameters used for all methods in a mailer class in
 order to share instance variables, headers and other common setup.
@@ -120,7 +120,7 @@ InvitationsMailer.with(inviter: person_a, invitee: person_b)
 
 ### Direct & resolved routes
 
-[Pull Request](https://github.com/rails/rails/pull/23138)
+[Pull request](https://github.com/rails/rails/pull/23138)
 
 Rails 5.1 adds two new methods, `resolve` and `direct`, to the routing
 DSL. The `resolve` method allows customizing polymorphic mapping of models.
@@ -164,7 +164,7 @@ end
 
 ### Unification of form_for and form_tag into form_with
 
-[Pull Request](https://github.com/rails/rails/pull/26976)
+[Pull request](https://github.com/rails/rails/pull/26976)
 
 Before Rails 5.1, there were two interfaces for handling HTML forms:
 `form_for` for model instances and `form_tag` for custom URLs.
@@ -284,7 +284,7 @@ Please refer to the [Changelog][railties] for detailed changes.
     ([commit](https://github.com/rails/rails/commit/f9ed83321ac1d1902578a0aacdfe55d3db754219))
 
 *   Remove -j (--javascript) option from `rails new` command.
-    ([Pull Request](https://github.com/rails/rails/pull/28546))
+    ([Pull request](https://github.com/rails/rails/pull/28546))
 
 ### Notable changes
 
@@ -293,28 +293,28 @@ Please refer to the [Changelog][railties] for detailed changes.
     ([commit](https://github.com/rails/rails/commit/e530534265d2c32b5c5f772e81cb9002dcf5e9cf))
 
 *   The config file `config/secrets.yml` is now loaded in with all keys as symbols.
-    ([Pull Request](https://github.com/rails/rails/pull/26929))
+    ([Pull request](https://github.com/rails/rails/pull/26929))
 
 *   Removed jquery-rails from default stack. rails-ujs, which is shipped
     with Action View, is included as default UJS adapter.
-    ([Pull Request](https://github.com/rails/rails/pull/27113))
+    ([Pull request](https://github.com/rails/rails/pull/27113))
 
 *   Add Yarn support in new apps with a yarn binstub and package.json.
-    ([Pull Request](https://github.com/rails/rails/pull/26836))
+    ([Pull request](https://github.com/rails/rails/pull/26836))
 
 *   Add Webpack support in new apps via the `--webpack` option, which will delegate
     to the rails/webpacker gem.
-    ([Pull Request](https://github.com/rails/rails/pull/27288))
+    ([Pull request](https://github.com/rails/rails/pull/27288))
 
 *   Initialize Git repo when generating new app, if option `--skip-git` is not
     provided.
-    ([Pull Request](https://github.com/rails/rails/pull/27632))
+    ([Pull request](https://github.com/rails/rails/pull/27632))
 
 *   Add encrypted secrets in `config/secrets.yml.enc`.
-    ([Pull Request](https://github.com/rails/rails/pull/28038))
+    ([Pull request](https://github.com/rails/rails/pull/28038))
 
 *   Display railtie class name in `rails initializers`.
-    ([Pull Request](https://github.com/rails/rails/pull/25257))
+    ([Pull request](https://github.com/rails/rails/pull/25257))
 
 Action Cable
 -----------
@@ -326,13 +326,13 @@ Please refer to the [Changelog][action-cable] for detailed changes.
 *   Added support for `channel_prefix` to Redis and evented Redis adapters
     in `cable.yml` to avoid name collisions when using the same Redis server
     with multiple applications.
-    ([Pull Request](https://github.com/rails/rails/pull/27425))
+    ([Pull request](https://github.com/rails/rails/pull/27425))
 
 *   Permit same-origin connections by default.
     ([commit](https://github.com/rails/rails/commit/dae404473409fcab0e07976aec626df670e52282))
 
 *   Add `ActiveSupport::Notifications` hook for broadcasting data.
-    ([Pull Request](https://github.com/rails/rails/pull/24988))
+    ([Pull request](https://github.com/rails/rails/pull/24988))
 
 Action Pack
 -----------
@@ -357,7 +357,7 @@ Please refer to the [Changelog][action-pack] for detailed changes.
 ### Deprecations
 
 *   Deprecated `:controller` and `:action` path parameters.
-    ([Pull Request](https://github.com/rails/rails/pull/23980))
+    ([Pull request](https://github.com/rails/rails/pull/23980))
 
 *   Deprecated `config.action_controller.raise_on_unfiltered_parameters`.
     It doesn't have any effect in Rails 5.1.
@@ -366,11 +366,11 @@ Please refer to the [Changelog][action-pack] for detailed changes.
 ### Notable changes
 
 *   Added the `direct` and `resolve` methods to the routing DSL.
-    ([Pull Request](https://github.com/rails/rails/pull/23138))
+    ([Pull request](https://github.com/rails/rails/pull/23138))
 
 *   Added a new `ActionDispatch::SystemTestCase` class to write system tests in
     your applications.
-    ([Pull Request](https://github.com/rails/rails/pull/26703))
+    ([Pull request](https://github.com/rails/rails/pull/26703))
 
 Action View
 -------------
@@ -383,12 +383,12 @@ Please refer to the [Changelog][action-view] for detailed changes.
     ([commit](https://github.com/rails/rails/commit/b9ba263e5aaa151808df058f5babfed016a1879f))
 
 *   Remove the option `encode_special_chars` misnomer from `strip_tags`.
-    ([Pull Request](https://github.com/rails/rails/pull/28061))
+    ([Pull request](https://github.com/rails/rails/pull/28061))
 
 ### Deprecations
 
 *   Deprecated Erubis ERB handler in favor of Erubi.
-    ([Pull Request](https://github.com/rails/rails/pull/27757))
+    ([Pull request](https://github.com/rails/rails/pull/27757))
 
 ### Notable changes
 
@@ -398,16 +398,16 @@ Please refer to the [Changelog][action-view] for detailed changes.
 
 *   Change `datetime_field` and `datetime_field_tag` to generate `datetime-local`
     fields.
-    ([Pull Request](https://github.com/rails/rails/pull/28061))
+    ([Pull request](https://github.com/rails/rails/pull/28061))
 
 *   New Builder-style syntax for HTML tags (`tag.div`, `tag.br`, etc.)
-    ([Pull Request](https://github.com/rails/rails/pull/25543))
+    ([Pull request](https://github.com/rails/rails/pull/25543))
 
 *   Add `form_with` to unify `form_tag` and `form_for` usage.
-    ([Pull Request](https://github.com/rails/rails/pull/26976))
+    ([Pull request](https://github.com/rails/rails/pull/26976))
 
 *   Add `check_parameters` option to `current_page?`.
-    ([Pull Request](https://github.com/rails/rails/pull/27549))
+    ([Pull request](https://github.com/rails/rails/pull/27549))
 
 Action Mailer
 -------------
@@ -422,7 +422,7 @@ Please refer to the [Changelog][action-mailer] for detailed changes.
 
 *   Allowed setting custom content type when attachments are included
     and body is set inline.
-    ([Pull Request](https://github.com/rails/rails/pull/27227))
+    ([Pull request](https://github.com/rails/rails/pull/27227))
 
 *   Allowed passing lambdas as values to the `default` method.
     ([Commit](https://github.com/rails/rails/commit/1cec84ad2ddd843484ed40b1eb7492063ce71baf))
@@ -433,7 +433,7 @@ Please refer to the [Changelog][action-mailer] for detailed changes.
 
 *   Passed the incoming arguments to the mailer action to `process.action_mailer` event under
     an `args` key.
-    ([Pull Request](https://github.com/rails/rails/pull/27900))
+    ([Pull request](https://github.com/rails/rails/pull/27900))
 
 Active Record
 -------------
@@ -442,12 +442,44 @@ Please refer to the [Changelog][active-record] for detailed changes.
 
 ### Removals
 
+*  Removed support for passing arguments and block at the same time to
+   `ActiveRecord::QueryMethods#select`.
+   ([Commit](https://github.com/rails/rails/commit/4fc3366d9d99a0eb19e45ad2bf38534efbf8c8ce))
+
+*  Removed deprecated `activerecord.errors.messages.restrict_dependent_destroy.one` and
+    `activerecord.errors.messages.restrict_dependent_destroy.many` i18n scopes.
+   ([Commit](https://github.com/rails/rails/commit/00e3973a311))
+
+*  Removed deprecated force reload argument in singular and collection association readers.
+   ([Commit](https://github.com/rails/rails/commit/09cac8c67af))
+
+*  Removed deprecated support to passing a column to `#quote`.
+   ([Commit](https://github.com/rails/rails/commit/e646bad5b7c))
+
+*  Removed deprecated `name` arguments from `#tables`.
+   ([Commit](https://github.com/rails/rails/commit/d5be101dd02214468a27b6839ffe338cfe8ef5f3))
+
+*  Removed deprecated behavior of `#tables` and `#table_exists?` to return tables and views
+   to return only tables and not views.
+   ([Commit](https://github.com/rails/rails/commit/5973a984c369a63720c2ac18b71012b8347479a8))
+
+*  Removed deprecated `original_exception` argument in `ActiveRecord::StatementInvalid#initialize`
+   and `ActiveRecord::StatementInvalid#original_exception`.
+   ([Commit](https://github.com/rails/rails/commit/bc6c5df4699d3f6b4a61dd12328f9e0f1bd6cf46))
+
 ### Deprecations
+
+*  Deprecated `error_on_ignored_order_or_limit` flag in favor of
+   `error_on_ignored_order`.
+   ([Commit](https://github.com/rails/rails/commit/451437c6f57e66cc7586ec966e530493927098c7))
+
+*  Deprecated `sanitize_conditions` in favor of `sanitize_sql`.
+   ([Pull request](https://github.com/rails/rails/pull/25999))
 
 ### Notable changes
 
 *   Change Default Primary Keys to BIGINT.
-    ([Pull Request](https://github.com/rails/rails/pull/26266))
+    ([Pull request](https://github.com/rails/rails/pull/26266))
 
 *   Virtual/generated column support for MySQL 5.7.5+ and MariaDB 5.2.0+.
     ([Commit](https://github.com/rails/rails/commit/65bf1c60053e727835e06392d27a2fb49665484c))
@@ -457,21 +489,21 @@ Please refer to the [Changelog][active-record] for detailed changes.
 
 *   Transactional tests now wrap all Active Record connections in database
     transactions.
-    ([Pull Request](https://github.com/rails/rails/pull/28726))
+    ([Pull request](https://github.com/rails/rails/pull/28726))
 
 *   Skipped comments in the output of `mysqldump` command by default.
-    ([Pull Request](https://github.com/rails/rails/pull/23301))
+    ([Pull request](https://github.com/rails/rails/pull/23301))
 
 *   Fixed `ActiveRecord::Relation#count` to use Ruby's `Enumerable#count` for counting
     records when a block is passed as argument instead of silently ignoring the
     passed block.
-    ([Pull Request](https://github.com/rails/rails/pull/24203))
+    ([Pull request](https://github.com/rails/rails/pull/24203))
 
 *   Pass `"-v ON_ERROR_STOP=1"` flag with `psql` command to not suppress SQL errors.
-    ([Pull Request](https://github.com/rails/rails/pull/24773))
+    ([Pull request](https://github.com/rails/rails/pull/24773))
 
 *   Add `ActiveRecord::Base.connection_pool.stat`.
-    ([Pull Request](https://github.com/rails/rails/pull/26988))
+    ([Pull request](https://github.com/rails/rails/pull/26988))
 
 Active Model
 ------------
@@ -493,7 +525,7 @@ Please refer to the [Changelog][active-model] for detailed changes.
 
 *   The original string assigned to a model attribute is no longer incorrectly
     frozen.
-    ([Pull Request](https://github.com/rails/rails/pull/28729))
+    ([Pull request](https://github.com/rails/rails/pull/28729))
 
 Active Job
 -----------
@@ -511,7 +543,7 @@ Please refer to the [Changelog][active-job] for detailed changes.
 ### Notable changes
 
 *   Added declarative exception handling via `ActiveJob::Base.retry_on` and `ActiveJob::Base.discard_on`.
-    ([Pull Request](https://github.com/rails/rails/pull/25991))
+    ([Pull request](https://github.com/rails/rails/pull/25991))
 
 *   Yield the job instance so you have access to things like `job.arguments` on
     the custom logic after retries fail.
@@ -533,43 +565,85 @@ Please refer to the [Changelog][active-support] for detailed changes.
 *   Removed deprecated behavior that halts callbacks when the return is false.
     ([Commit](https://github.com/rails/rails/commit/3a25cdca3e0d29ee2040931d0cb6c275d612dffe))
 
+*   Removed deprecated support of passing a class as a value in a query.
+    ([Commit](https://github.com/rails/rails/commit/b4664864c972463c7437ad983832d2582186e886))
+
+*   Removed deprecated support to query using commas on LIMIT.
+    ([Commit](https://github.com/rails/rails/commit/fc3e67964753fb5166ccbd2030d7382e1976f393))
+
+*   Removed deprecated `conditions` parameter from `#destroy_all`.
+    ([Commit](https://github.com/rails/rails/commit/d31a6d1384cd740c8518d0bf695b550d2a3a4e9b))
+
+*   Removed deprecated `conditions` parameter from `#delete_all`.
+    ([Commit](https://github.com/rails/rails/pull/27503/commits/e7381d289e4f8751dcec9553dcb4d32153bd922b))
+
+*   Removed deprecated method `#load_schema_for` in favor of `#load_schema`.
+    ([Commit](https://github.com/rails/rails/commit/419e06b56c3b0229f0c72d3e4cdf59d34d8e5545))
+
+*   Removed deprecated `#raise_in_transactional_callbacks` configuration.
+    ([Commit](https://github.com/rails/rails/commit/8029f779b8a1dd9848fee0b7967c2e0849bf6e07))
+
+*   Removed deprecated `#use_transactional_fixtures` configuration.
+    ([Commit](https://github.com/rails/rails/commit/3955218dc163f61c932ee80af525e7cd440514b3))
+
 ### Deprecations
 
 *   The top level `HashWithIndifferentAccess` class has been softly deprecated
     in favor of the `ActiveSupport::HashWithIndifferentAccess` one.
     ([Pull request](https://github.com/rails/rails/pull/28157))
 
-*   Deprecate passing string to `:if` and `:unless` conditional options on `set_callback` and `skip_callback`.
+*   Deprecated passing string to `:if` and `:unless` conditional options on `set_callback` and `skip_callback`.
     ([Commit](https://github.com/rails/rails/commit/0952552)
+
+*   Deprecated `supports_migrations?` on connection adapters.
+    ([Pull request](https://github.com/rails/rails/pull/28172))
+
+*   Deprecated `Migrator.schema_migrations_table_name`, use `SchemaMigration.table_name` instead.
+    ([Pull request](https://github.com/rails/rails/pull/28351))
+
+*   Deprecated using `#quoted_id` in quoting and type casting.
+    ([Pull request](https://github.com/rails/rails/pull/27962))
+
+*   Deprecated passing `default` argument to `#index_name_exists?`.
+    ([Pull request](https://github.com/rails/rails/pull/26930))
+
 
 ### Notable changes
 
 *   Fixed duration parsing and traveling to make it consistent across DST changes.
     ([Commit](https://github.com/rails/rails/commit/8931916f4a1c1d8e70c06063ba63928c5c7eab1e),
-    [Pull Request](https://github.com/rails/rails/pull/26597))
+    [Pull request](https://github.com/rails/rails/pull/26597))
 
 *   Updated Unicode to version 9.0.0.
-    ([Pull Request](https://github.com/rails/rails/pull/27822))
+    ([Pull request](https://github.com/rails/rails/pull/27822))
 
 *   Add Duration#before and #after as aliases for #ago and #since.
-    ([Pull Request](https://github.com/rails/rails/pull/27721))
+    ([Pull request](https://github.com/rails/rails/pull/27721))
 
 *   Added `Module#delegate_missing_to` to delegate method calls not
     defined for the current object to a proxy object.
-    ([Pull Request](https://github.com/rails/rails/pull/23930))
+    ([Pull request](https://github.com/rails/rails/pull/23930))
 
 *   Added `Date#all_day` which returns a range representing the whole day
     of the current date & time.
-    ([Pull Request](https://github.com/rails/rails/pull/24930))
+    ([Pull request](https://github.com/rails/rails/pull/24930))
 
 *   Introduced the `assert_changes` and `assert_no_changes` method for tests.
-    ([Pull Request](https://github.com/rails/rails/pull/25393))
+    ([Pull request](https://github.com/rails/rails/pull/25393))
 
 *   The `travel` and `travel_to` methods now raise on nested calls.
-    ([Pull Request](https://github.com/rails/rails/pull/24890))
+    ([Pull request](https://github.com/rails/rails/pull/24890))
 
 *   Update `DateTime#change` to support usec and nsec.
-    ([Pull Request](https://github.com/rails/rails/pull/28242))
+    ([Pull request](https://github.com/rails/rails/pull/28242))
+
+*   Inheriting directly from `ActiveRecord::Migration` raises an error.
+    Specify the Rails version for which the migration was written for.
+    ([Commit](https://github.com/rails/rails/commit/249f71a22ab21c03915da5606a063d321f04d4d3))
+
+*   An error is raised when `through` association has ambiguous reflection name.
+    ([Commit](https://github.com/rails/rails/commit/0944182ad7ed70d99b078b22426cbf844edd3f61))
+
 
 Credits
 -------
